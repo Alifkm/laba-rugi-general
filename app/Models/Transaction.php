@@ -14,18 +14,11 @@ class Transaction extends Model
 
     protected $table ='transactions';
 
-    // public function scopeFilter($query, array $filters) {
-    //     if($filters['search'] ?? false) {
-    //         $query->where('transaction_name', 'like', '%' . request('search') . '%')
-    //                 ->orWhere('date', 'like', '%' . request('search') . '%');
-    //     }
-    // }
-
     public function transactionTypes(){
         return $this->belongsTo(TransactionType::class, 'transaction_type_id');
     }
 
-    public function transaction_sources(){
+    public function transactionSources(){
         return $this->belongsTo(TransactionSource::class, 'transaction_source_id');
     }
 
