@@ -2,15 +2,13 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\OutcomeController;
-use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ApprovalController;
-use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\TransactionSourceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +65,20 @@ Route::controller(OutcomeController::class)->group(function() {
   Route::post('/outcome/request-delete', 'requestDelete')->middleware(['thisIsAdmin', 'auth'])->name('outcome.request-delete'); // approve transaction
   // Route::get('/outcome/{outcome}', 'destroy')->middleware('auth')->name('outcome.delete'); // delete outcome data
 });
+
+
+
+// TRANSACTION SOURCE CONTROLLER
+Route::controller(TransactionSourceController::class)->group(function() {
+  Route::get('/transaction-source', 'index')->middleware('auth')->name('transactionSource.index'); // get all transaction source
+  Route::get('/transaction-source/create', 'create')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.create'); // create transaction source form
+  Route::post('/transaction-source', 'store')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.store'); // store transaction source data
+  Route::get('/transaction-source/{transactionSource}/edit', 'edit')->middleware('auth')->name('transactionSource.edit'); // show transaction source edit form
+  Route::put('/transaction-source/{transactionSource}', 'update')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.udpate'); // update transaction source data
+  Route::get('/transaction-source/{transactionSource}', 'destroy')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.delete'); // delete transaction source data
+});
+
+
 
 
 // APPROVE CONTROLLER
