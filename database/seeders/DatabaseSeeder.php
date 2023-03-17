@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         
         $this->call(AdminTypeSeeder::class);
         $this->call(AdminSeeder::class);
+        $this->call(ProfitLossComponent::class);
         $this->call(TransactionTypeSeeder::class);
         $this->call(TransactionSourceSeeder::class);
         $this->call(TransactionIncomeSeeder::class);
