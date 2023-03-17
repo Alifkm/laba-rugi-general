@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transaction_sources', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('transaction_source_name');
+        Schema::create('profit_loss_components', function (Blueprint $table) {
+            $table->increments('id'); 
+            $table->string('profit_loss_component_name');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction_sources');
+        Schema::dropIfExists('profit_loss_components');
     }
 };
