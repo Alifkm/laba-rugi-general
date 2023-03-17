@@ -29,7 +29,7 @@ class IncomeController extends Controller
                 if($transaction->total === 0) {
                     return "-";
                 }else {
-                    return $transaction->transaction_sources->transaction_source_name;
+                    return $transaction->transactionSources->transaction_source_name;
                 }
 
             })
@@ -80,7 +80,7 @@ class IncomeController extends Controller
         //
 
         return view('income.create', [
-            'sources' => TransactionSource::where('id', 'like', 1)->get()
+            'sources' => TransactionSource::where('transaction_type_id', 'like', 1)->get()
         ]);
     }
 

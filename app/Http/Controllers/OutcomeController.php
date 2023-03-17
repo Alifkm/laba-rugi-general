@@ -25,7 +25,7 @@ class OutcomeController extends Controller
                     })
                     ->addColumn('source', function($transaction){
                         
-                        return $transaction->transaction_sources->transaction_source_name;
+                        return $transaction->transactionSources->transaction_source_name;
                     })
                     ->addColumn('total', function($transaction){
                         
@@ -73,8 +73,9 @@ class OutcomeController extends Controller
     {
         //
         return view('outcome.create', [
-            'sources' => TransactionSource::whereBetween('id', [2, 11])->get()
+            'sources' => TransactionSource::where('transaction_type_id',  'like', 2)->get()
         ]);
+
     }
 
     /**
