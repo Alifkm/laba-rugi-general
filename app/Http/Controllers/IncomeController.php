@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProfitLossComponent;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Transaction;
 use App\Models\TransactionSource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class IncomeController extends Controller
 {
@@ -79,8 +81,13 @@ class IncomeController extends Controller
     {
         //
 
+        $transactionSources = DB::table('transaction_sources as ts')
+                                ->join('profit_loss_components as plc', 'plc.id', '=', 'ts.profit_loss_component_id')
+                                ->where('plc.profit_loss_component_name', 'LIKE', 'Penghasilan Neto')
+                                ->get();
+
         return view('income.create', [
-            'sources' => TransactionSource::where('transaction_type_id', 'like', 1)->get()
+            'sources' => $transactionSources
         ]);
     }
 
@@ -143,9 +150,14 @@ class IncomeController extends Controller
     public function edit($id)
     {
         //
+        $transactionSources = DB::table('transaction_sources as ts')
+                    ->join('profit_loss_components as plc', 'plc.id', '=', 'ts.profit_loss_component_id')
+                    ->where('plc.profit_loss_component_name', 'LIKE', 'Penghasilan Neto')
+                    ->get();
+
         return view('income.edit', [
             'income' => Transaction::where('id', 'like', $id)->first(),
-            'sources' => TransactionSource::where('id', 'like', 1)->get()
+            'sources' => $transactionSources
         ]);
     }
 

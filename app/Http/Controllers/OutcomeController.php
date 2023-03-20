@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\TransactionSource;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class OutcomeController extends Controller
@@ -72,8 +73,13 @@ class OutcomeController extends Controller
     public function create()
     {
         //
+        $transactionSources = DB::table('transaction_sources as ts')
+        ->join('profit_loss_components as plc', 'plc.id', '=', 'ts.profit_loss_component_id')
+        ->where('plc.profit_loss_component_name', 'NOT LIKE', 'Penghasilan Neto')
+        ->get();
+
         return view('outcome.create', [
-            'sources' => TransactionSource::where('transaction_type_id',  'like', 2)->get()
+            'sources' => $transactionSources
         ]);
 
     }
@@ -136,9 +142,14 @@ class OutcomeController extends Controller
     public function edit($id)
     {
         //
+        $transactionSources = DB::table('transaction_sources as ts')
+        ->join('profit_loss_components as plc', 'plc.id', '=', 'ts.profit_loss_component_id')
+        ->where('plc.profit_loss_component_name', 'NOT LIKE', 'Penghasilan Neto')
+        ->get();
+
         return view('outcome.edit', [
             'outcome' => Transaction::where('id', 'like', $id)->first(),
-            'sources' => TransactionSource::whereBetween('id', [2, 11])->get()
+            'sources' => $transactionSources
         ]);
     }
 
