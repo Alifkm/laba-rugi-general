@@ -17,7 +17,7 @@
             @enderror
           </div>
         </div>
-        <div class="row">
+        {{-- <div class="row">
           <div class="mb-3 col-lg-4 col-12">
             <label for="transaction_type_id" class="form-label">Transaction Type</label>
             <select name="transaction_type_id" class="form-select form-select-sm" aria-label=".form-select-sm example">
@@ -29,7 +29,7 @@
               <p class="text-danger">{{ $message }}</p>
             @enderror
           </div>
-        </div>
+        </div> --}}
         <div class="row">
           <div class="mb-3 col-lg-4 col-12">
             <label for="profit_loss_component_id" class="form-label">Profit Loss Component</label>

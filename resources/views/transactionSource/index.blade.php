@@ -14,7 +14,7 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
-                <th scope="col">Type</th>
+                {{-- <th scope="col">Type</th> --}}
                 <th scope="col">Profit Loss Component</th>
                 <th scope="col">Action</th>       
               </tr>
@@ -51,10 +51,10 @@
           data: 'transaction_source_name', 
           name: 'transaction_source_name'
         },
-        {
-          data: 'type', 
-          name: 'type'
-        },
+        // {
+        //   data: 'type', 
+        //   name: 'type'
+        // },
         {
           data: 'profit_loss_component', 
           name: 'profit_loss_component'
@@ -64,7 +64,7 @@
           name: 'action', 
           orderable: false, 
           searchable: false, 
-          // visible: user === "owner" ? false : true
+          // visible: user === "superAdmin" ? false : true
         },  
       ],
     });

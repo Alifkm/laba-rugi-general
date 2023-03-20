@@ -21,19 +21,26 @@ class TransactionSourceController extends Controller
         if($request->ajax()) {
             return datatables()->of($transactionSource)
             ->addColumn('action', function($transactionSource){
-                        
-                $actionBtn =
-                '<div class = "d-flex justify-content-center">
-                    <a href="/transaction-source/'.$transactionSource->id.'/edit" id="'.$transactionSource->id.'" class="edit btn btn-outline-success btn-sm">Edit</a>
-                    <a href="javascript:void(0)" id="'.$transactionSource->id.' '.$transactionSource->transaction_source_name.'" data-toggle="tooltip" data-original-title="Delete"  class="delete btn btn-outline-danger btn-sm mx-1">Delete</a>
-                </div>';
+                if(auth()->user()->adminType->admin_type_name === "superAdmin") {
+                    $actionBtn =
+                        '<div class = "d-flex justify-content-center">
+                        <a href="/transaction-source/'.$transactionSource->id.'/edit" id="'.$transactionSource->id.'" class="edit btn btn-outline-success btn-sm">Detail</a>
+                        </div>';    
+                } else {
+                    $actionBtn =
+                    '<div class = "d-flex justify-content-center">
+                        <a href="/transaction-source/'.$transactionSource->id.'/edit" id="'.$transactionSource->id.'" class="edit btn btn-outline-success btn-sm">Edit</a>
+                        <a href="javascript:void(0)" id="'.$transactionSource->id.' '.$transactionSource->transaction_source_name.'" data-toggle="tooltip" data-original-title="Delete"  class="delete btn btn-outline-danger btn-sm mx-1">Delete</a>
+                    </div>';
+                }
+              
                     
                 return $actionBtn;
             })
-            ->addColumn('type', function($transactionSource){
+            // ->addColumn('type', function($transactionSource){
                 
-                return $transactionSource->transactionTypes->transaction_type_name;
-            })
+            //     return $transactionSource->transactionTypes->transaction_type_name;
+            // })
             ->addColumn('profit_loss_component', function($transactionSource){
                 return $transactionSource->profitLossComponent->profit_loss_component_name;
             })
@@ -56,7 +63,7 @@ class TransactionSourceController extends Controller
     {
         //
         return view('transactionSource.create', [
-            'types' => TransactionType::get(),
+            // 'types' => TransactionType::get(),
             'profitLossComponents' => ProfitLossComponent::get()
         ]);
     }
@@ -72,14 +79,14 @@ class TransactionSourceController extends Controller
         //
         $request->validate([
             'transaction_source_name' => 'required',
-            'transaction_type_id' => 'required',
+            // 'transaction_type_id' => 'required',
             'profit_loss_component_id' => 'required'
         ]); 
             
         
         TransactionSource::create([
             'transaction_source_name' => $request->transaction_source_name,
-            'transaction_type_id' => $request->transaction_type_id,
+            // 'transaction_type_id' => $request->transaction_type_id,
             'profit_loss_component_id' => $request->profit_loss_component_id
         ]);
 
@@ -110,8 +117,8 @@ class TransactionSourceController extends Controller
         // dd($transactionSource);  
         return view('transactionSource.edit', [
             'transactionSource' => $transactionSource,
-            'types' => TransactionType::get(),
-            'profitLossComponents' => ProfitLossComponent::get()
+            'profitLossComponents' => ProfitLossComponent::get(),
+            'user' => auth()->user()->adminType->admin_type_name
         ]);
     }
 
@@ -127,13 +134,13 @@ class TransactionSourceController extends Controller
         //
         $request->validate([
             'transaction_source_name' => 'required',
-            'transaction_type_id' => 'required',
+            // 'transaction_type_id' => 'required',
             'profit_loss_component_id' => 'required'
         ]); 
             
         $transactionSource->update([
             'transaction_source_name' => $request->transaction_source_name,
-            'transaction_type_id' => $request->transaction_type_id,
+            // 'transaction_type_id' => $request->transaction_type_id,
             'profit_loss_component_id' => $request->profit_loss_component_id
         ]);
 

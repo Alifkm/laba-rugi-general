@@ -3,7 +3,7 @@
 @section('content')
   <div class="container d-flex flex-column bg-light">
     <div>
-      <h1 class="mb-5">Edit transaction source</h1>
+      <h1 class="mb-5">{{ $user === 'superAdmin' ? 'Detail transaction source' : 'Edit transaction source' }}</h1>
     </div>
     <div>
       <form method="POST" action="/transaction-source/{{ $transactionSource->id }}"  autocomplete="off">
@@ -12,13 +12,14 @@
         <div class="row">
           <div class="mb-3 col-lg-4 col-12">
             <label for="transaction_source_name" class="form-label">Transaction Source Name</label>
-            <input type="text" name="transaction_source_name" class="form-control" id="transaction_source_name" value="{{ $transactionSource->transaction_source_name }}">
+            <input type="text" name="transaction_source_name" class="form-control" id="transaction_source_name" value="{{ $transactionSource->transaction_source_name }}" 
+            {{ $user === 'superAdmin' ? "disabled" : "" }}>
             @error('transaction_source_name')
               <p class="text-danger">{{ $message }}</p>
             @enderror
           </div>
         </div>
-        <div class="row">
+        {{-- <div class="row">
           <div class="mb-3 col-lg-4 col-12">
             <label for="transaction_type_id" class="form-label">Transaction Type</label>
             <select name="transaction_type_id" class="form-select form-select-sm" aria-label=".form-select-sm example">
@@ -34,11 +35,11 @@
               <p class="text-danger">{{ $message }}</p>
             @enderror
           </div>
-        </div>
+        </div> --}}
         <div class="row">
           <div class="mb-3 col-lg-4 col-12">
             <label for="profit_loss_component_id" class="form-label">Profit Loss Component</label>
-            <select name="profit_loss_component_id" class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <select name="profit_loss_component_id" class="form-select form-select-sm" aria-label=".form-select-sm example" {{ $user === 'superAdmin' ? "disabled" : "" }}>
               @foreach ($profitLossComponents as $profitLossComponent)
                 @if($transactionSource->profitLossComponent->profit_loss_component_name == $profitLossComponent->profit_loss_component_name)
                   <option value={{ $profitLossComponent->id }} selected>{{ $profitLossComponent->profit_loss_component_name }}</option>
