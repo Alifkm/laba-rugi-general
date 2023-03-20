@@ -33,7 +33,7 @@ class ApprovalController extends Controller
                     ->addColumn('source', function($transaction){
                         
                         $source =
-                        '<td>'.$transaction->transaction_sources->transaction_source_name.'</td>';
+                        '<td>'.$transaction->transactionSources->transaction_source_name.'</td>';
                             
                         return $source;
                     })

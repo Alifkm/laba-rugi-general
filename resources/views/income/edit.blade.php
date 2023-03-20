@@ -52,7 +52,7 @@
                 <option selected>-</option>
               @else
                 @foreach ($sources as $source)
-                  @if($income->transaction_sources->transaction_source_name == $source->transaction_source_name)
+                  @if($income->transactionSources->transaction_source_name == $source->transaction_source_name)
                     <option value={{ $source->id }} selected>{{ $source->transaction_source_name }}</option>
                   @else
                     <option value={{ $source->id }}>{{ $source->transaction_source_name }}</option>

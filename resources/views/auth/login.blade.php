@@ -56,7 +56,7 @@
                 </div>
               </div>
 
-              <div class="row mb-3 d-flex flex-column align-items-start w-50 m-auto">
+              {{-- <div class="row mb-3 d-flex flex-column align-items-start w-50 m-auto">
                 <div class="d-flex align-self-start col-form-label text-md-end">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -66,7 +66,7 @@
                     </label>
                   </div>
                 </div>
-              </div>
+              </div> --}}
 
               <div class="w-100 d-flex justify-content-center">
                 <div class="align-self-center d-flex justify-content-center w-100">

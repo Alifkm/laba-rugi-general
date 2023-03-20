@@ -8,7 +8,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
-  <title>PT.BUKILLA MANDIRI</title>
+  <title>PnL Report</title>
 
 
 
@@ -216,8 +216,8 @@
     {{-- navbar mobile --}}
     <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white shadow-sm mobile-nav">
       <div class="container-fluid row">
-        <a class="navbar-brand col-md-1 col-sm-2 col-4" href="{{ route('dashboard.index') }}">
-          <img src="{{url('/img/logo-bukilla.png')}}" class="logo" alt="logo bukilla mandiri" width="120px" height="auto">
+        <a class="navbar-brand col-md-1 col-sm-2 col-4" href="{{ route('report.index') }}">
+          <img src="{{url('/img/pnl.png')}}" class="logo" alt="Logo PnL Report" width="90px" height="auto">
         </a>
 
         <!-- Right Side Of Navbar -->
@@ -340,7 +340,7 @@
     <nav class="navbar desktop-nav navbar-expand-md navbar-light bg-nav shadow-sm d-flex justify-content-start align-items-start sticky-sidebar ">
       <div class="container p-4 d-flex flex-column">
         <a class="navbar-brand mb-5 text-white" href="{{ url('/') }}">
-          BukillaFinance
+          PnL Report
         </a>
             
         <div class="collapse navbar-collapse d-flex flex-column" id="navbarSupportedContent">
@@ -400,7 +400,7 @@
     {{-- main section --}}
     <main class="vh-100 w-100 d-flex flex-column px-4 {{ Auth::check() === true ? 'margin-main' : "" }}">
       <ul class="container header-desktop navbar-nav mt-2 ms-auto w-100 d-flex align-items-center flex-row justify-content-between">
-        <a href="{{ route('dashboard.index') }}"><img src="{{url('/img/logo-bukilla.png')}}" alt="logo bukilla mandiri" width="120px" height="auto"></a>
+        <a href="{{ route('report.index') }}"><img src="{{url('/img/pnl.png')}}" alt="Logo PnL Report" width="90px" height="auto"></a>
         <!-- Authentication Links -->
         @guest
             @if (Route::has('login'))

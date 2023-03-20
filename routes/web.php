@@ -6,7 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\OutcomeController;
 use App\Http\Controllers\ApprovalController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\TransactionSourceController;
 
@@ -21,10 +21,11 @@ use App\Http\Controllers\TransactionSourceController;
 |
 */
 
-Route::controller(DashboardController::class)->group(function() {
-  Route::get('/', 'index')->middleware('auth')->name('dashboard.index');
-  Route::get('/report', 'index')->middleware('auth')->name('dashboard.index'); // dashboard
-  Route::post('/report', 'filter')->middleware('auth')->name('dashboard.filter'); // filter dashboard
+// REPORT CONTROLLER
+Route::controller(ReportController::class)->group(function() {
+  Route::get('/', 'index')->middleware('auth')->name('report.index');
+  Route::get('/report', 'index')->middleware('auth')->name('report.index'); // report page
+  Route::post('/report', 'filter')->middleware('auth')->name('report.filter'); // filter report
   Route::get('/report/chart', 'chartIndex')->middleware('auth')->name('chart.index'); // chart
   Route::post('/report/chart', 'chartFilter')->middleware('auth')->name('chart.filter'); // filter chart
 });

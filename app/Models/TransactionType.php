@@ -16,9 +16,9 @@ class TransactionType extends Model
         return $this->hasOne(Transaction::class);
     }
 
-    public function transactionSources(){
-        return $this->hasOne(TransactionSource::class);
-    }
+    // public function transactionSources(){
+    //     return $this->hasOne(TransactionSource::class);
+    // }
 
     protected $fillable =['transaction_type_name'];
 }

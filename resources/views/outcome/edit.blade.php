@@ -49,7 +49,7 @@
             <label for="transaction_source_id" class="form-label">Source</label>
             <select name="transaction_source_id" class="form-select form-select-sm" aria-label=".form-select-sm example" {{ $updatedByCondition ? "disabled" : "" }}>
               @foreach ($sources as $source)
-                @if($outcome->transaction_sources->transaction_source_name == $source->transaction_source_name)
+                @if($outcome->transactionSources->transaction_source_name == $source->transaction_source_name)
                   <option value={{ $source->id }} selected>{{ $source->transaction_source_name }}</option>
                 @else  
                   <option value={{ $source->id }}>{{ $source->transaction_source_name }}</option>

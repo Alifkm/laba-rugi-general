@@ -21,7 +21,7 @@ class AdminSeeder extends Seeder
             'admin_type_id' => 1,
             'email' => 'owner@gmail.com',
             'password' => bcrypt('admin123'),
-            'phone' => '081293827331'
+            'phone' => '081295027331'
         ]);
 
         DB::table('admins')->insert([
@@ -29,7 +29,7 @@ class AdminSeeder extends Seeder
             'admin_type_id' => 2,
             'email' => 'admin1@gmail.com',
             'password' => bcrypt('admin123'),
-            'phone' => '082224312321'
+            'phone' => '089624312321'
         ]);
 
         DB::table('admins')->insert([
@@ -37,7 +37,7 @@ class AdminSeeder extends Seeder
             'admin_type_id' => 2,
             'email' => 'admin2@gmail.com',
             'password' => bcrypt('admin123'),
-            'phone' => '087893047123'
+            'phone' => '085693047123'
         ]);
     }
 }
