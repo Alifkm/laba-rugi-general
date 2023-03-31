@@ -74,12 +74,13 @@ class OutcomeController extends Controller
     {
         //
         $transactionSources = DB::table('transaction_sources as ts')
-        ->join('profit_loss_components as plc', 'plc.id', '=', 'ts.profit_loss_component_id')
+        ->join('profit_loss_components as plc', 'ts.profit_loss_component_id', '=', 'plc.id')
         ->where('plc.profit_loss_component_name', 'NOT LIKE', 'Penghasilan Neto')
+        ->select('ts.id', 'ts.transaction_source_name')
         ->get();
 
         return view('outcome.create', [
-            'sources' => $transactionSources
+            'sources' => $transactionSources->toArray()
         ]);
 
     }
@@ -108,7 +109,7 @@ class OutcomeController extends Controller
         }
 
         $res = str_replace( '.', '', $request -> total);
-
+        
         Transaction::create([
             'transaction_name' => $request->transaction_name,
             'transaction_type_id' => 2,
@@ -142,14 +143,19 @@ class OutcomeController extends Controller
     public function edit($id)
     {
         //
+
         $transactionSources = DB::table('transaction_sources as ts')
-        ->join('profit_loss_components as plc', 'plc.id', '=', 'ts.profit_loss_component_id')
+        ->join('profit_loss_components as plc', 'ts.profit_loss_component_id', '=', 'plc.id')
         ->where('plc.profit_loss_component_name', 'NOT LIKE', 'Penghasilan Neto')
+        ->select('ts.id', 'ts.transaction_source_name')
         ->get();
 
+        $outcome = Transaction::where('id', 'like', $id)->first();
+
+
         return view('outcome.edit', [
-            'outcome' => Transaction::where('id', 'like', $id)->first(),
-            'sources' => $transactionSources
+            'outcome' => $outcome,
+            'sources' => $transactionSources->toArray()
         ]);
     }
 

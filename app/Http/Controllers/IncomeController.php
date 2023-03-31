@@ -82,12 +82,13 @@ class IncomeController extends Controller
         //
 
         $transactionSources = DB::table('transaction_sources as ts')
-                                ->join('profit_loss_components as plc', 'plc.id', '=', 'ts.profit_loss_component_id')
-                                ->where('plc.profit_loss_component_name', 'LIKE', 'Penghasilan Neto')
-                                ->get();
+            ->join('profit_loss_components as plc', 'ts.profit_loss_component_id', '=', 'plc.id')
+            ->where('plc.profit_loss_component_name', 'LIKE', 'Penghasilan Neto')
+            ->select('ts.id', 'ts.transaction_source_name')
+            ->get();
 
         return view('income.create', [
-            'sources' => $transactionSources
+            'sources' => $transactionSources->toArray()
         ]);
     }
 
@@ -151,13 +152,16 @@ class IncomeController extends Controller
     {
         //
         $transactionSources = DB::table('transaction_sources as ts')
-                    ->join('profit_loss_components as plc', 'plc.id', '=', 'ts.profit_loss_component_id')
-                    ->where('plc.profit_loss_component_name', 'LIKE', 'Penghasilan Neto')
-                    ->get();
+            ->join('profit_loss_components as plc', 'ts.profit_loss_component_id', '=', 'plc.id')
+            ->where('plc.profit_loss_component_name', 'LIKE', 'Penghasilan Neto')
+            ->select('ts.id', 'ts.transaction_source_name')
+            ->get();
+
+        $income = Transaction::where('id', 'like', $id)->first();
 
         return view('income.edit', [
-            'income' => Transaction::where('id', 'like', $id)->first(),
-            'sources' => $transactionSources
+            'income' => $income,
+            'sources' => $transactionSources->toArray()
         ]);
     }
 
