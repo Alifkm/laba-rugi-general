@@ -16,7 +16,11 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('transaction_type_id')->unsigned();
-            $table->integer('transaction_source_id')->unsigned();
+            // $table->integer('transaction_source_id')->unsigned();
+            $table->integer('transaction_source_id')->foreignId('transaction_source_id')
+                    ->constrained('transaction_sources')
+                    ->onUpdate('cascade')
+                    ->onDelete('cascade');
             $table->string('transaction_name');
             $table->date('date');
             $table->bigInteger('total');
@@ -25,17 +29,26 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        
+        // Schema::table('transactions', function (Blueprint $table) {
+        //     $table->foreign('transaction_source_id')
+        //         ->references('id')
+        //         ->on('transaction_sources');
+        // });
+
+        // Schema::table('transactions', function (Blueprint $table) {
+        //     $table->foreignId('transaction_source_id')
+                // ->constrained('transaction_sources')
+                // ->onUpdate('cascade')
+                // ->onDelete('cascade');
+        // });
+
         Schema::table('transactions', function (Blueprint $table) {
             $table->foreign('transaction_type_id')
                 ->references('id')
                 ->on('transaction_types');
         });
 
-        Schema::table('transactions', function (Blueprint $table) {
-            $table->foreign('transaction_source_id')
-                ->references('id')
-                ->on('transaction_sources');
-        });
     }
 
     /**
