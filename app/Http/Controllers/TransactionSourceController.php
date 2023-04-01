@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ProfitLossComponent;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\TransactionType;
 use App\Models\TransactionSource;
@@ -21,21 +22,9 @@ class TransactionSourceController extends Controller
         if($request->ajax()) {
             return datatables()->of($transactionSource)
             ->addColumn('action', function($transactionSource){
-                if(auth()->user()->adminType->admin_type_name === "superAdmin") {
-                    $actionBtn =
-                        '<div class = "d-flex justify-content-center">
-                        <a href="/transaction-source/'.$transactionSource->id.'/edit" id="'.$transactionSource->id.'" class="edit btn btn-outline-success btn-sm">Detail</a>
-                        </div>';    
-                } else {
-                    $actionBtn =
-                    '<div class = "d-flex justify-content-center">
-                        <a href="/transaction-source/'.$transactionSource->id.'/edit" id="'.$transactionSource->id.'" class="edit btn btn-outline-success btn-sm">Edit</a>
-                        <a href="javascript:void(0)" id="'.$transactionSource->id.' '.$transactionSource->transaction_source_name.'" data-toggle="tooltip" data-original-title="Delete"  class="delete btn btn-outline-danger btn-sm mx-1">Delete</a>
-                    </div>';
-                }
-              
-                    
-                return $actionBtn;
+                
+                return view('transactionSource.action', ['transactionSource' => $transactionSource]);
+                        
             })
             // ->addColumn('type', function($transactionSource){
                 
@@ -156,6 +145,8 @@ class TransactionSourceController extends Controller
     public function destroy(TransactionSource $transactionSource)
     {
         //
+        $transaction = Transaction::where('transaction_source_id', '=', $transactionSource->id)->get();
+        Transaction::destroy($transaction->pluck('id'));
         $transactionSource->delete();
         return redirect('/transaction-source')->with('message', 'Transaction source ' . $transactionSource['transaction_source_name'] . ' deleted successfully!');
     }
