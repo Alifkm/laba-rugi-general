@@ -75,8 +75,9 @@ Route::controller(TransactionSourceController::class)->group(function() {
   Route::get('/transaction-source/create', 'create')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.create'); // create transaction source form
   Route::post('/transaction-source', 'store')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.store'); // store transaction source data
   Route::get('/transaction-source/{transactionSource}/edit', 'edit')->middleware('auth')->name('transactionSource.edit'); // show transaction source edit form
-  Route::put('/transaction-source/{transactionSource}', 'update')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.udpate'); // update transaction source data
-  Route::get('/transaction-source/{transactionSource}', 'destroy')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.delete'); // delete transaction source data
+  Route::put('/transaction-source/{transactionSource}', 'update')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.update'); // update transaction source data
+  // Route::get('/transaction-source/{transactionSource}', 'destroy')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.delete'); // delete transaction source data
+  Route::delete('/transaction-source/{transactionSource}', 'destroy')->middleware(['thisIsAdmin', 'auth'])->name('transactionSource.destroy'); // delete transaction source data transactionSource
 });
 
 
