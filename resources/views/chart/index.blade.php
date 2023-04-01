@@ -35,40 +35,40 @@
       </form>
     </div>
 
+    @if($filterMonths === '')
+      <div class="d-flex justify-content-center">
+        <h4>insert date to see the chart</h4>
+      </div>
+    @else
       <div class="row justify-content-center mb-5">
-          <div class="col-md-12 d-none" id="sec-chart">
-            <div class="card">
-              <div class="card-header">
-                <h1 class="text-center h4">
-                  Grafik laba rugi per tahun 
-                </h1>
-              </div>
-              <div class="card-body">
-                <div id="chartYear"></div>
-              </div>
+        <div class="col-md-12" id="first-chart">
+          <div class="card">
+            <div class="card-header" id="card-bulanan">
+              <h1 class="text-center h4">
+                Grafik laba rugi tahun {{ $filterMonths }} 
+              </h1>
+              {{-- {{ request()->segment(count(request()->segments())) }} --}}
+            </div>
+            <div class="card-body">
+              <div id="chartYearly"></div>
             </div>
           </div>
+        </div>
 
-          <div class="col-md-12" id="first-chart">
-            <div class="card">
-              <div class="card-header" id="card-bulanan">
-                <h1 class="text-center h4">
-                  Grafik laba rugi tahun {{ $filterMonths }} 
-                </h1>
-                {{-- {{ request()->segment(count(request()->segments())) }} --}}
-              </div>
-              <div class="card-body">
-                <div id="chartMonth"></div>
-              </div>
+        <div class="col-md-12 d-none" id="sec-chart">
+          <div class="card">
+            <div class="card-header">
+              <h1 class="text-center h4">
+                Grafik laba rugi per tahun 
+              </h1>
+            </div>
+            <div class="card-body">
+              <div id="chartAnnually"></div>
             </div>
           </div>
-
-      </div>
-    {{-- @else
-      <div>
-        <h1 class="text-center h4">Insert date to see chart</h1>
-      </div>
-    @endif --}}
+        </div>
+     </div>
+    @endif 
   </div>
     
   {{-- <script src="https://code.highcharts.com/highcharts.js"></script> --}}
@@ -82,14 +82,14 @@
       });   
     });
 
-    var labaYearly = <?php echo json_encode($totalLaba); ?>;
-    var month = <?php echo json_encode($month); ?>;
-    Highcharts.chart('chartMonth', {
+    var labaYearly = <?php echo json_encode($labaRugiTahunan); ?>;
+    var months = <?php echo json_encode($months); ?>;
+    Highcharts.chart('chartYearly', {
       title: {
         text: ''
       },
       xAxis: {
-        categories: month
+        categories: months
       },
       yAxis: {
         title: {
@@ -107,14 +107,14 @@
       }]
     });
 
-    var labaYear = <?php echo json_encode($totalLabaYear); ?>;
-    var year = <?php echo json_encode($year); ?>;
-    Highcharts.chart('chartYear', {
+    var labaAnnually = <?php echo json_encode($labaRugiPerTahun); ?>;
+    var years = <?php echo json_encode($years); ?>;
+    Highcharts.chart('chartAnnually', {
       title: {
         text: ''
       },
       xAxis: {
-        categories: year
+        categories: years
       },
       yAxis: {
         title: {
@@ -128,7 +128,7 @@
       },
       series: [{
         name: 'Nominal laba rugi',
-        data: labaYear
+        data: labaAnnually
       }]
     });
     
@@ -151,8 +151,6 @@
       }else {
         submit_btn.classList.add('d-none');
       }
-      // console.log(viewChartYearly);
-      // first_chr.classList.toggle('d-none');
     }
   </script>
 
