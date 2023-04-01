@@ -18,53 +18,53 @@ class TransactionSourceSeeder extends Seeder
         //
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 1,
-            'transaction_source_name' => 'nilai kontrak',
+            'transaction_source_name' => 'Nilai kontrak project',
         ]);
 
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 2,
-            'transaction_source_name' => 'pembelian material',
+            'transaction_source_name' => 'Pembelian material',
         ]);
 
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 2,
-            'transaction_source_name' => 'gaji karyawan',
+            'transaction_source_name' => 'Gaji karyawan',
         ]);
 
 
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 3,
-            'transaction_source_name' => 'penyusutan',
+            'transaction_source_name' => 'Penyusutan',
         ]);
 
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 3,
-            'transaction_source_name' => 'transportasi',
+            'transaction_source_name' => 'Transportasi',
         ]);
 
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 3,
-            'transaction_source_name' => 'pemeliharaan',
+            'transaction_source_name' => 'Pemeliharaan',
         ]);
 
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 3,
-            'transaction_source_name' => 'dokumen',
+            'transaction_source_name' => 'Dokumen',
         ]);
 
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 3,
-            'transaction_source_name' => 'listrik dan telepon',
+            'transaction_source_name' => 'Listrik dan telepon',
         ]);
 
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 3,
-            'transaction_source_name' => 'kantor',
+            'transaction_source_name' => 'Kantor',
         ]);
 
         DB::table('transaction_sources')->insert([
             'profit_loss_component_id' => 3,
-            'transaction_source_name' => 'operasional lainnya',
+            'transaction_source_name' => 'Operasional lainnya',
         ]);
 
         
