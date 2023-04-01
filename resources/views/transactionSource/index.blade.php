@@ -70,44 +70,45 @@
     });
 
     $('body').on('click', '.delete', function (event){
-        event.preventDefault();
-        swal({
-            title: "Are you sure you want to delete this transaction source?",
-            text: "If you delete this, it will be gone forever.",
-            icon: "warning",
-            type: "warning",
-            buttons: ["Cancel","Yes!"],
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((willDelete) => {
+      let form =  $(this).closest("form");
+      event.preventDefault();
+      swal({
+          title: "Are you sure you want to delete this transaction source?",
+          text: "If you delete this, it will be gone forever.",
+          icon: "warning",
+          type: "warning",
+          buttons: ["Cancel","Yes!"],
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+      }).then((willDelete) => {
             if (willDelete) {
-                // form.submit();
-              let id = $(this).attr('id').split(" ")[0];
-              let tempName = $(this).attr('id').split(" ");
-              tempName.shift();
-              let name = tempName.join(" ");
+                form.submit();
+            //   let id = $(this).attr('id').split(" ")[0];
+            //   let tempName = $(this).attr('id').split(" ");
+            //   tempName.shift();
+            //   let name = tempName.join(" ");
 
-              console.log(id);
+            //   console.log(id);
 
-              $.ajax({
-                // type:"DELETE",
-                url: "transaction-source/"+id,
-                data: { id: id },
-                error: function(err) {
-                  console.log(err);
-                },
-                beforeSend: function() {
-                  $("#overlay").fadeIn(300);
-                },
-                success: function(res){
-                  setTimeout(function(){  
-                    $("#overlay").fadeOut(300);
-                  },500);
-                  swal("Success!", "transaction source " + name + " deleted successfully!", "success");
-                  $('#data-table').DataTable().ajax.reload();
-                }
-              });
+            //   $.ajax({
+            //     // type:"DELETE",
+            //     url: "transaction-source/"+id,
+            //     data: { id: id },
+            //     error: function(err) {
+            //       console.log(err);
+            //     },
+            //     beforeSend: function() {
+            //       $("#overlay").fadeIn(300);
+            //     },
+            //     success: function(res){
+            //       setTimeout(function(){  
+            //         $("#overlay").fadeOut(300);
+            //       },500);
+            //       swal("Success!", "transaction source " + name + " deleted successfully!", "success");
+            //       $('#data-table').DataTable().ajax.reload();
+            //     }
+            //   });
             }
         });
     });
