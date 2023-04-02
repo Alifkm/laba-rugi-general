@@ -14,7 +14,7 @@ class TransactionSource extends Model
     protected $table ='transaction_sources';
 
     public function transaction(){
-        return $this->hasOne(Transaction::class);
+        return $this->hasMany(Transaction::class);
     }
 
     // public function transactionTypes(){
