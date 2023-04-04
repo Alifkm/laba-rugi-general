@@ -1516,7 +1516,7 @@ class TransactionOutcomeSeeder extends Seeder
 
         // Material
         DB::table('transactions')->insert([ 
-            'transaction_name' => 'Biaya total pembelian material project pemasangan SUTM, gardu portal & SUTR tahap 1 PT. BUKILLA',
+            'transaction_name' => 'Biaya total pembelian material project pemasangan SUTM, gardu portal & SUTR tahap 2 PT. XYZ',
             'date' => '2020-12-28',
             'total' => 51072870,
             'transaction_type_id' => 2,
@@ -2201,7 +2201,7 @@ class TransactionOutcomeSeeder extends Seeder
 
         // Material
         DB::table('transactions')->insert([ 
-            'transaction_name' => 'Biaya total pembelian material project pemasangan SUTM, gardu portal & SUTR tahap 2 tahun 2021 PT. BUKILLA',
+            'transaction_name' => 'Biaya total pembelian material project pemasangan SUTM, gardu portal & SUTR tahap 2 tahun 2021',
             'date' => '2021-04-28',
             'total' => 47892156,  
             'transaction_type_id' => 2,
@@ -2369,7 +2369,7 @@ class TransactionOutcomeSeeder extends Seeder
 
         // Material
         DB::table('transactions')->insert([ 
-            'transaction_name' => 'Biaya total pembelian material project pemasangan LBS wilayah ULP Babelan',
+            'transaction_name' => 'Biaya total pembelian material project pemasangan LBS wilayah ULP XYZ',
             'date' => '2021-05-28',
             'total' => 57001012,  
             'transaction_type_id' => 2,
@@ -2381,7 +2381,7 @@ class TransactionOutcomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([ 
-            'transaction_name' => 'Biaya total pembelian material project pemasangan CUT OUT wilayah ULP Babelan',
+            'transaction_name' => 'Biaya total pembelian material project pemasangan CUT OUT wilayah ULP XYZ',
             'date' => '2021-05-28',
             'total' => 50100046,  
             'transaction_type_id' => 2,
@@ -2393,7 +2393,7 @@ class TransactionOutcomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([ 
-            'transaction_name' => 'Biaya total pembelian material project pemasangan SKTM dan gardu kios SPLIT 3C',
+            'transaction_name' => 'Biaya total pembelian material project pemasangan SUTR untuk potong beban',
             'date' => '2021-05-28',
             'total' => 53735000,  
             'transaction_type_id' => 2,
@@ -2739,7 +2739,7 @@ class TransactionOutcomeSeeder extends Seeder
 
         // Material
         DB::table('transactions')->insert([ 
-            'transaction_name' => 'Biaya total pembelian material project pembangunan SKTM, SUTM, gardu dan SUTR tahap 3 PT. BUKILLA MANDIRI',
+            'transaction_name' => 'Biaya total pembelian material project pembangunan SKTM, SUTM, gardu dan SUTR tahap 3',
             'date' => '2021-07-28',
             'total' => 40110054,
             'transaction_type_id' => 2,
@@ -3728,7 +3728,7 @@ class TransactionOutcomeSeeder extends Seeder
 
     // Material
     DB::table('transactions')->insert([ 
-        'transaction_name' => 'Biaya total pembelian material project Pemasangan SKTM, Gardu Tembok, Instalasi TM-TR, SKTR dan SUTR di Cluster Vranta - Tera Damai',
+        'transaction_name' => 'Biaya total pembelian material project Pemasangan SKTM, Gardu Tembok, Instalasi TM-TR, SKTR dan SUTR di Cluster XYZ',
         'date' => '2022-01-28',
         'total' => 129478360,  
         'transaction_type_id' => 2,
@@ -4079,7 +4079,7 @@ class TransactionOutcomeSeeder extends Seeder
 
     // Material
     DB::table('transactions')->insert([ 
-        'transaction_name' => 'Biaya total pembelian material project PERLUASAN JTM, JTR DAN GARDU TAHAP 1 TAHUN 2022 PT. BUKILLA MANDIRI',
+        'transaction_name' => 'Biaya total pembelian material project PERLUASAN JTM, JTR DAN GARDU TAHAP 1',
         'date' => '2022-03-28',
         'total' => 112091522,  
         'transaction_type_id' => 2,
@@ -4631,7 +4631,7 @@ class TransactionOutcomeSeeder extends Seeder
 
     // Material
     DB::table('transactions')->insert([ 
-        'transaction_name' => 'Biaya total pembelian material project PERLUASAN JTM, JTR DAN GARDU TAHAP 2 TAHUN 2022 PT. BUKILLA MANDIRI',
+        'transaction_name' => 'Biaya total pembelian material project PERLUASAN JTM, JTR DAN GARDU TAHAP 3',
         'date' => '2022-07-28',
         'total' => 90741056,  
         'transaction_type_id' => 2,
@@ -5077,7 +5077,7 @@ class TransactionOutcomeSeeder extends Seeder
 
     // Material
     DB::table('transactions')->insert([ 
-        'transaction_name' => 'Biaya total pembelian material project pemasangan sktm, gardu tembok, instalasi TM-TR, SKTR, dan SUTR, di cluster curtina - Tera Damai',
+        'transaction_name' => 'Biaya total pembelian material project pemasangan sktm, gardu tembok, instalasi TM-TR, SKTR, dan SUTR, di cluster XYZ',
         'date' => '2022-10-28',
         'total' => 156566809,  
         'transaction_type_id' => 2,

@@ -20,7 +20,7 @@ class TransactionIncomeSeeder extends Seeder
 
         // Tahun 2020
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SKTM, SUTM, Gardu Portal & SUTR PB PT. Alamindo Trulynusa',
+            'transaction_name' => 'Pemasangan SKTM, SUTM, Gardu Portal & SUTR PB PT. XYZ',
             'date' => '2020-01-20',
             'total' => 32026629,
             'transaction_type_id' => 1,
@@ -33,7 +33,7 @@ class TransactionIncomeSeeder extends Seeder
 
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM, & Gardu Portal PB PT. Adhi Persada Gedung',
+            'transaction_name' => 'Pemasangan SUTM, & Gardu Portal PB PT. XYZ',
             'date' => '2020-01-20',
             'total' => 29628548,
             'transaction_type_id' => 1,
@@ -45,7 +45,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTR, PB Sari Budi Asih',
+            'transaction_name' => 'Pemasangan SUTR, PB XYZ',
             'date' => '2020-01-24',
             'total' => 20133131,
             'transaction_type_id' => 1,
@@ -57,7 +57,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTR, PB Suradi',
+            'transaction_name' => 'Pemasangan SUTR, PB XYZ',
             'date' => '2020-01-24',
             'total' => 19517883,
             'transaction_type_id' => 1,
@@ -69,7 +69,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM, Gardu Cantol & SUTR PB PT. Souber Wijaya sakti',
+            'transaction_name' => 'Pemasangan SUTM, Gardu Cantol & SUTR PB PT. XYZ',
             'date' => '2020-01-24',
             'total' => 39529188,
             'transaction_type_id' => 1,
@@ -81,7 +81,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan  SUTM, Gardu Cantol dan SUTR PB Perum Srimukti Residence',
+            'transaction_name' => 'Pemasangan  SUTM, Gardu Cantol dan SUTR PB XYZ',
             'date' => '2020-01-24',
             'total' => 40330939,
             'transaction_type_id' => 1,
@@ -93,7 +93,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan  SUTM, Gardu Cantol dan SUTR PB PT. Permata Indah Cipta Graha',
+            'transaction_name' => 'Pemasangan  SUTM, Gardu Cantol dan SUTR PB PT. XYZ',
             'date' => '2020-02-07',
             'total' => 51920393,
             'transaction_type_id' => 1,
@@ -105,7 +105,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan  SUTM, Gardu Cantol dan SUTR PB. Muslim Cahaya Purnama',
+            'transaction_name' => 'Pemasangan  SUTM, Gardu Cantol dan SUTR PB. XYZ',
             'date' => '2020-02-11',
             'total' => 44409401,
             'transaction_type_id' => 1,
@@ -118,7 +118,7 @@ class TransactionIncomeSeeder extends Seeder
 
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM & Gardu Portal PB Universitas Bhayangkara',
+            'transaction_name' => 'Pemasangan SUTM & Gardu Portal PB XYZ',
             'date' => '2020-02-18',
             'total' => 37302766,
             'transaction_type_id' => 1,
@@ -130,7 +130,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTR, PB Adang',
+            'transaction_name' => 'Pemasangan SUTR, PB XYZ',
             'date' => '2020-03-03',
             'total' => 33349680,
             'transaction_type_id' => 1,
@@ -143,7 +143,7 @@ class TransactionIncomeSeeder extends Seeder
         
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM, Gardu Portal dan SUTR PB Nurhasan',
+            'transaction_name' => 'Pemasangan SUTM, Gardu Portal dan SUTR PB XYZ',
             'date' => '2020-03-13',
             'total' => 36199170,
             'transaction_type_id' => 1,
@@ -155,7 +155,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM, & Gardu Cantol PB Apipudin',
+            'transaction_name' => 'Pemasangan SUTM, & Gardu Cantol PB XYZ',
             'date' => '2020-03-17',
             'total' => 40565481,
             'transaction_type_id' => 1,
@@ -167,7 +167,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
         
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM & Gardu Portal PB Universitas Gunadarma',
+            'transaction_name' => 'Pemasangan SUTM & Gardu Portal PB XYZ',
             'date' => '2020-04-21',
             'total' => 61276990,
             'transaction_type_id' => 1,
@@ -179,7 +179,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTH, & Gardu Cantol Persada',
+            'transaction_name' => 'Pemasangan SUTH, & Gardu Cantol Perumahan XYZ',
             'date' => '2020-05-10',
             'total' => 78230860,
             'transaction_type_id' => 1,
@@ -191,7 +191,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTH Perumahan Harapan Baru Bekasi',
+            'transaction_name' => 'Pemasangan SUTH Perumahan XYZ',
             'date' => '2020-06-19',
             'total' => 42820182,
             'transaction_type_id' => 1,
@@ -203,7 +203,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SKTM Daerah Tebet',
+            'transaction_name' => 'Pemasangan SKTM Daerah XYZ',
             'date' => '2020-07-13',
             'total' => 88201000,
             'transaction_type_id' => 1,
@@ -215,7 +215,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SKTM, Gardi Kios Split 3C & SUTR PB Kejaksaan Negri Bekasi',
+            'transaction_name' => 'Pemasangan SKTM, Gardi Kios Split 3C & SUTR PB XYZ',
             'date' => '2020-08-04',
             'total' => 109609133,
             'transaction_type_id' => 1,
@@ -239,7 +239,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM, Gardu Cantol & SUTR PB ISOL',
+            'transaction_name' => 'Pemasangan SUTM, Gardu Cantol & SUTR PB XYZ',
             'date' => '2020-10-23',
             'total' => 107191365,
             'transaction_type_id' => 1,
@@ -251,7 +251,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SKTM DAN Gardu Kios Split 3C PB Yayasan At-Taqwa',
+            'transaction_name' => 'Pemasangan SKTM DAN Gardu Kios Split 3C PB Yayasan XYZ',
             'date' => '2020-11-27',
             'total' => 95986096,
             'transaction_type_id' => 1,
@@ -276,7 +276,7 @@ class TransactionIncomeSeeder extends Seeder
 
         
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pekerjaan Peninggian PHBTR yang terkena dampak banjir Wilayah ULP Babelan',
+            'transaction_name' => 'Pekerjaan Peninggian PHBTR yang terkena dampak banjir Wilayah ULP XYZ',
             'date' => '2020-12-30',
             'total' => 153821788,
             'transaction_type_id' => 1,
@@ -288,7 +288,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pekerjaan Peninggian Kubikel Spit 3C UNIS, GKJB, PL 102, PL 112 terdampak banjir Wilayah ULP Bekasi Kota',
+            'transaction_name' => 'Pekerjaan Peninggian Kubikel Spit 3C UNIS, GKJB, PL 102, PL 112 terdampak banjir Wilayah ULP XYZ',
             'date' => '2020-12-30',
             'total' => 71975020,
             'transaction_type_id' => 1,
@@ -319,7 +319,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan Gardu Portal Perumahan Bekasi Timur Regency',
+            'transaction_name' => 'Pemasangan Gardu Portal Perumahan XYZ',
             'date' => '2021-02-15',
             'total' => 81381722,
             'transaction_type_id' => 1,
@@ -331,7 +331,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM Kelurahan Jakasampurna',
+            'transaction_name' => 'Pemasangan SUTM Kelurahan XYZ',
             'date' => '2021-02-15',
             'total' => 56472600,
             'transaction_type_id' => 1,
@@ -343,7 +343,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan LBS Wilayah Jati Asih',
+            'transaction_name' => 'Pemasangan LBS Wilayah XYZ',
             'date' => '2021-03-31',
             'total' => 77291029,
             'transaction_type_id' => 1,
@@ -367,7 +367,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan LBS Wilayah ULP Babelan',
+            'transaction_name' => 'Pemasangan LBS Wilayah ULP XYZ',
             'date' => '2021-05-17',
             'total' => 85238358,
             'transaction_type_id' => 1,
@@ -379,7 +379,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan Cut Out ULP Babelan',
+            'transaction_name' => 'Pemasangan Cut Out ULP XYZ',
             'date' => '2021-05-17',
             'total' => 89144583,
             'transaction_type_id' => 1,
@@ -391,7 +391,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan Gardu Portal',
+            'transaction_name' => 'Pemasangan Gardu Portal Kecamatan XYZ',
             'date' => '2021-05-17',
             'total' => 60381652,
             'transaction_type_id' => 1,
@@ -475,7 +475,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM dan Gardu Portal Pengadilan Negeri Bekasi',
+            'transaction_name' => 'Pemasangan SUTM dan Gardu Portal Wilayah XYZ',
             'date' => '2021-09-10',
             'total' => 88929253,
             'transaction_type_id' => 1,
@@ -523,7 +523,7 @@ class TransactionIncomeSeeder extends Seeder
         // ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan Gardu Listrik Keluharan Kota Baru Bekasi',
+            'transaction_name' => 'Pemasangan Gardu Listrik Keluharan XYZ',
             'date' => '2021-11-12',
             'total' => 81109200,
             'transaction_type_id' => 1,
@@ -547,7 +547,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM Daerah Pasar Palmerah',
+            'transaction_name' => 'Pemasangan SUTM Daerah Pasar XYZ',
             'date' => '2021-12-10',
             'total' => 73349008,
             'transaction_type_id' => 1,
@@ -580,7 +580,7 @@ class TransactionIncomeSeeder extends Seeder
         // Tahun 2022
         
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SKTM, Gardu Tembok, Instalasi TM-TR, SKTR, DAN SUTR di Cluster Vranta - Tera Damai',
+            'transaction_name' => 'Pemasangan SKTM, Gardu Tembok, Instalasi TM-TR, SKTR, DAN SUTR di Cluster XYZ',
             'date' => '2022-01-28',
             'total' => 284600000,
             'transaction_type_id' => 1,
@@ -592,7 +592,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM untuk peremajaan Jaringna P. Kencana',
+            'transaction_name' => 'Pemasangan SUTM untuk peremajaan Jaringna P. XYZ',
             'date' => '2022-02-17',
             'total' => 16210333,
             'transaction_type_id' => 1,
@@ -616,7 +616,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Uprafting Trafo ULP Bekasi Kota',
+            'transaction_name' => 'Uprafting Trafo ULP Kota XYZ',
             'date' => '2022-02-27',
             'total' => 5837507,
             'transaction_type_id' => 1,
@@ -640,7 +640,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTM, SKTM, dan Gardu Portal Daerah Slipi',
+            'transaction_name' => 'Pemasangan SUTM, SKTM, dan Gardu Portal Daerah XYZ',
             'date' => '2022-04-05',
             'total' => 166382900,
             'transaction_type_id' => 1,
@@ -664,7 +664,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTR Pecah Beban ULP Bebelan Tahap 1',
+            'transaction_name' => 'Pemasangan SUTR Pecah Beban ULP XYZ Tahap 1',
             'date' => '2022-06-12',
             'total' => 122889001,
             'transaction_type_id' => 1,
@@ -677,7 +677,7 @@ class TransactionIncomeSeeder extends Seeder
 
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan Instalasi Stadion untuk keandalan AFF U19 2022',
+            'transaction_name' => 'Pemasangan Instalasi untuk Stadion XYZ',
             'date' => '2022-07-11',
             'total' => 14123327,
             'transaction_type_id' => 1,
@@ -701,7 +701,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan Garsip Cantol 100 KVA ULP Bekasi Kota',
+            'transaction_name' => 'Pemasangan Garsip Cantol 100 KVA ULP XYZ',
             'date' => '2022-07-27',
             'total' => 24487332,
             'transaction_type_id' => 1,
@@ -713,7 +713,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTR Pemberatan ULP Bekasi Kota',
+            'transaction_name' => 'Pemasangan SUTR Pemberatan ULP XYZ',
             'date' => '2022-08-02',
             'total' => 33812155,
             'transaction_type_id' => 1,
@@ -725,7 +725,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTR Pemberatan ULP Medan Satria',
+            'transaction_name' => 'Pemasangan SUTR Pemberatan ULP XYZ',
             'date' => '2022-08-02',
             'total' => 73724502,
             'transaction_type_id' => 1,
@@ -749,7 +749,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Uprafting Travo 250 kVA ULP Babelan Tahap 1',
+            'transaction_name' => 'Uprafting Travo 250 kVA ULP XYZ Tahap 1',
             'date' => '2022-09-20',
             'total' => 12264112,
             'transaction_type_id' => 1,
@@ -761,7 +761,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SKTM, Gardu Tembok, Instalasi TM-TR, SKTR, dan SUTR di Cluster Curtina - Tera Damai',
+            'transaction_name' => 'Pemasangan SKTM, Gardu Tembok, Instalasi TM-TR, SKTR, dan SUTR di Cluster XYZ',
             'date' => '2022-10-12',
             'total' => 270625071,
             'transaction_type_id' => 1,
@@ -773,7 +773,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SKTM Kabupaten Bekasi',
+            'transaction_name' => 'Pemasangan SKTM Kabupaten XYZ',
             'date' => '2022-11-07',
             'total' => 105115987,
             'transaction_type_id' => 1,
@@ -785,7 +785,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Pemasangan SUTR Pecah Beban ULP Bebelan Tahap 2',
+            'transaction_name' => 'Pemasangan SUTR Pecah Beban ULP XYZ Tahap 2',
             'date' => '2022-12-03',
             'total' => 114115987,
             'transaction_type_id' => 1,
@@ -797,7 +797,7 @@ class TransactionIncomeSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'transaction_name' => 'Uprafting Travo 250 kVA ULP Babelan Tahap 2',
+            'transaction_name' => 'Uprafting Travo 250 kVA ULP XYZ Tahap 2',
             'date' => '2022-12-25',
             'total' => 139271809,
             'transaction_type_id' => 1,
